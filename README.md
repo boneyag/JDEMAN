@@ -2,7 +2,7 @@
 Java Dead Method ANalyzer (JDEMAN) uses codeql to analyse the source code of Java projects to detect unused methods (also known as dead methods).
 
 ### Downloade CodeQL CLI
-To run the scripts in this repo, you need **CodeQL CLI**. To download CodeQL CLI from this [link](https://github.com/github/codeql-cli-binaries/releases). Please refer to this page for further information on getting started with CodeQL CLI.
+To run the scripts in this repo, you need **CodeQL CLI**. To download CodeQL CLI from this [link](https://github.com/github/codeql-cli-binaries/releases). Please refer to this [page](https://help.semmle.com/codeql/codeql-cli/procedures/get-started.html) for further information on getting started with CodeQL CLI.
 
 *Note: While you can run CodeQL in different platforms (Windows and MacOS) this README covers commands for the Linux platform (All commands were run and tested on Ubuntu 20.04).*
 

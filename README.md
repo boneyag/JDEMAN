@@ -30,3 +30,19 @@ This command expects you to be in the location of your project root. The actual 
 `$ extracted_location/codeql-cli/./codeql database create --language=java database_location/codeDB`
 
 When running the command, codeQL expects that there is not codeDB dir in the database_location. I am using the command `./codeql` because I didn't include it in the classpath.
+
+To test the database creation process, you could run the above command on the sample Java project in the source directory. The resulting database should be same as the *dummyProject* in the data directory. One could run the queries on both data bases and produce similar results. 
+
+### Running the queries
+
+The ql directory contains a set of quiries. If you run queries from dm_1 to dm_6 you should be able to reproduce the results as indicated in the paper. 
+
+To run the CodeQL queries, you could either use the [VisusalStudio Code extension](https://help.semmle.com/codeql/codeql-for-vscode/procedures/using-extension.html) or the CodeQL CLI.
+
+If you are using the extention, simply copy the queries to the java>ql>example>snippets directory. Then open one of the query file, right click on the file and select CodeQL:Run Query option. This will generate an interactive result set. One could click on the entries and view the content of the file.
+
+If you are using CodeQL CLI use the following command to execute the queries. 
+
+`codeql database analyze <database> <queries> --format=<format> --output=<output>`
+
+In the above command, you need to locate `codeql` if it is not in the class path similar to database creating process. `<database>` should be replaced withe path to the databsae. `<queries>` should be replace with the path to the query. Provide the format (eg: csv) and the path for output file. More information on this topic can be found in [here](https://help.semmle.com/codeql/codeql-cli/procedures/analyze-codeql-database.html).
